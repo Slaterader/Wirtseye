@@ -1,0 +1,29 @@
+# Large release artifacts belong in GitHub Releases, not Git history.
+*.exe
+*.msi
+*.zip
+*.7z
+
+# Python/dev output if source is added later.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/
+dist/
+
+# Wirt runtime/user/debug data should never be committed.
+account_state.json
+farm_telemetry.sqlite*
+session_telemetry.sqlite*
+debug/
+captures/
+logs/
+backups/
+*.support.zip
+
+# Editor / OS noise.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

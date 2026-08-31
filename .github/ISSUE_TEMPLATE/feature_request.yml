@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an improvement or new Wirt's Eye capability.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the play/use case rather than only the button or implementation you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Wirt to do?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything else?
+      description: Optional examples, mockups, or alternative approaches.

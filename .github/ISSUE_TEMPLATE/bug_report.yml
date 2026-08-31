@@ -1,0 +1,87 @@
+name: Bug / Bad Read
+description: Report a scanner, OCR, UI, setup, or runtime problem.
+title: "[Bug] "
+labels: ["bug", "alpha-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Wirt's Eye. Different screen/DPI configurations are especially useful during Alpha.
+        **Do not publicly attach a diagnostic bundle until you are comfortable with its screenshots/content.**
+  - type: input
+    id: version
+    attributes:
+      label: Wirt's Eye version
+      placeholder: 5.0-alpha1-rc1
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: What kind of problem is this?
+      options:
+        - Missed item / no notification
+        - Wrong item / false notification
+        - Ground-item CHECK behavior
+        - Character gear setup
+        - Rune/Gem/Material stash setup
+        - Window/UI layout
+        - Inspection Queue
+        - Run/farm tracking
+        - Crash/freeze/startup
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: Tell us what Wirt did and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: desktop_resolution
+    attributes:
+      label: Desktop resolution
+      placeholder: 1920x1080
+  - type: input
+    id: scaling
+    attributes:
+      label: Windows display scaling
+      placeholder: 100%, 125%, 150%, etc.
+  - type: input
+    id: d2_resolution
+    attributes:
+      label: D2R resolution
+      placeholder: 1920x1080
+  - type: dropdown
+    id: d2_mode
+    attributes:
+      label: D2R display mode
+      options:
+        - Fullscreen
+        - Windowed fullscreen / borderless
+        - Windowed
+        - Not sure
+  - type: dropdown
+    id: repeatable
+    attributes:
+      label: Does it repeat?
+      options:
+        - Yes, reliably
+        - Sometimes
+        - Happened once
+        - Not sure
+  - type: dropdown
+    id: bundle
+    attributes:
+      label: Diagnostic/support bundle available?
+      options:
+        - Yes - I can share it publicly
+        - Yes - but I want to share it privately
+        - No
+  - type: textarea
+    id: extras
+    attributes:
+      label: Anything else?
+      description: Screenshots, item names, farm route, or other context can help.
