@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "download_page": "https://github.com/OWNER/REPOSITORY/releases",
+  "download_page": "ttps://github.com/Slaterader/Wirtseye/releases",
   "channels": {
     "alpha": {
       "version": "5.0-alpha1-rc1",
-      "download_url": "https://github.com/OWNER/REPOSITORY/releases/tag/v5.0-alpha1-rc1",
+      "download_url": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha1-rc1",
       "sha256": "7e3df6f8569c704f6249ef53b740ecd79f324454d7e54e1c1536c9b6294d5f0d",
       "notes": "Initial Friends & Family Alpha release."
     },
     "stable": {
       "version": "0.0.0",
-      "download_url": "https://github.com/OWNER/REPOSITORY/releases",
+      "download_url": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha1-rc1",
       "sha256": "",
       "notes": "No stable Wirt's Eye release is published yet."
     }
