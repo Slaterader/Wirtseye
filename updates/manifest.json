@@ -1,12 +1,15 @@
 {
-  "schema": 1,
-  "download_page": "ttps://github.com/Slaterader/Wirtseye/releases",
+  "schema": 2,
+  "download_page": "https://github.com/Slaterader/Wirtseye/releases",
   "channels": {
     "alpha": {
-      "version": "5.0-alpha1-rc2",
-      "download_url": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha1-rc2",
-      "sha256": "7e3df6f8569c704f6249ef53b740ecd79f324454d7e54e1c1536c9b6294d5f0d",
-      "notes": "Initial Friends & Family Alpha release."
+      "version": "5.0-alpha2-dev32",
+      "download_url": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha2-dev32",
+      "relaease_page": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha2-dev32",
+      "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/v5.0-alpha2-dev32/WirtsEye-5.0-alpha2-dev32-portable.zip",
+      "asset_kind":  "portable_zip",
+      "sha256": "e01195f2918432f02c709fe93c51dc1429de384501dc233d557690ff65ee0f95",
+      "notes": "Alpha 2 dev32: tested boss-run TP completion plus bootstrap self-updater for verified future GitHub releases."
     },
     "stable": {
       "version": "0.0.0",
