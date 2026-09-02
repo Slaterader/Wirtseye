@@ -5,7 +5,7 @@
     "alpha": {
       "version": "5.0-alpha2-dev32",
       "download_url": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha2-dev32",
-      "relaease_page": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha2-dev32",
+      "release_page": "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha2-dev32",
       "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/v5.0-alpha2-dev32/WirtsEye-5.0-alpha2-dev32-portable.zip",
       "asset_kind":  "portable_zip",
       "sha256": "e01195f2918432f02c709fe93c51dc1429de384501dc233d557690ff65ee0f95",
