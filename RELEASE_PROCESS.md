@@ -1,25 +1,47 @@
-# Release process
+# Wirt's Eye release process
 
-This repository is the public release/update home for Wirt's Eye.
+This repository is the official public release and update home for Wirt's Eye.
 
-## Early-alpha release flow
+## Alpha release flow
 
-1. Build and test the release artifact locally.
-2. Calculate its SHA-256 hash.
-3. In GitHub, create a release with a matching version tag, for example `v5.0-alpha1-rc2`.
-4. Upload the finished tester artifact to the GitHub Release. Do not commit large EXE/ZIP binaries directly into the repository history.
-5. Publish release notes.
-6. Edit `updates/manifest.json` with the new version, GitHub release URL, SHA-256 hash, and short notes.
-7. Commit/push the manifest **after** the release artifact is available.
+1. **Build the release artifact locally.**
+2. **Run the release/privacy validation gates.**
+   - Do not package local account state, screenshots, logs, telemetry, backups, caches, diagnostics, or developer-only artifacts.
+   - Use `tools/validate_release_privacy.py` when available in the build workflow.
+3. **Test the exact artifact you intend to publish.**
+4. **Calculate the ZIP SHA-256 hash.**
+5. **Create the GitHub Release** with a version tag matching the build, for example:
+   - `v5.0-alpha3-preview10-hotfix7`
+6. **Upload the final portable ZIP** as the Release asset.
+   - Do not commit large EXE/ZIP binaries directly into repository history.
+7. **Publish release notes** on the GitHub Release.
+8. **Update `updates/manifest.json`** with the release metadata:
+   - `version`
+   - `download_url` / `release_page`
+   - `asset_url`
+   - `asset_kind`
+   - `sha256`
+   - short `notes`
+9. **Commit and push the manifest last.**
+10. **Verify the updater from an older supported build** before treating the release as complete.
+11. **Post the release in the Wirt's Eye Discord** `#releases` channel and publish the announcement.
 
-Publishing the manifest last prevents Wirt from notifying users about a build that cannot yet be downloaded.
+Publishing the manifest last prevents Wirt from offering a release before its asset is available.
+
+## Important: never silently replace a published asset
+
+The update manifest pins the release ZIP by SHA-256.
+
+If a published ZIP is replaced or repacked — **even for documentation-only changes** — its hash changes. Do not replace a live release asset without also updating the manifest hash and retesting the updater path.
+
+Prefer publishing a new version rather than mutating an already-distributed release.
 
 ## Update channels
 
-- `alpha`: active tester builds.
-- `stable`: future conservative/public releases.
+- `alpha` — active public/test builds.
+- `stable` — future conservative releases.
 
-The first updater implementation is deliberately read-only: it checks the manifest and opens the official release page. A later updater will download, verify SHA-256, back up state, replace application files from a separate updater process, and restart Wirt.
+There is no stable Wirt's Eye release yet.
 
 ## Hash helper
 
@@ -29,6 +51,24 @@ From PowerShell:
 .\tools\Get-ReleaseHash.ps1 -Path "C:\path\to\WirtsEye-release.zip"
 ```
 
-## RC1 Friends build SHA-256
+You can also use:
 
-`7e3df6f8569c704f6249ef53b740ecd79f324454d7e54e1c1536c9b6294d5f0d`
+```powershell
+Get-FileHash "C:\path\to\WirtsEye-release.zip" -Algorithm SHA256
+```
+
+## Release checklist
+
+Before changing the manifest, confirm:
+
+- version inside the app matches the GitHub tag;
+- release asset filename is correct;
+- release asset downloads successfully;
+- SHA-256 matches the exact uploaded asset;
+- release notes are posted;
+- privacy validation passes;
+- updater successfully sees and downloads the release from an older supported build.
+
+## Community
+
+Discord: https://discord.gg/xkf6KGehJH
