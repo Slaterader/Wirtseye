@@ -1,38 +1,66 @@
-# Alpha support and useful bug reports
+# Wirt's Eye support
 
-Thanks for testing Wirt's Eye. During alpha, reports from different PCs are especially valuable because OCR and UI behavior can vary with resolution, DPI scaling, and D2R display mode.
+Thanks for testing Wirt's Eye. Reports from different PCs are especially valuable because OCR, UI layout, and screen capture behavior can vary with resolution, DPI scaling, display mode, and the exact game state being observed.
 
-## For a bad item read / missed drop
+## Fastest support route: Discord
 
-If possible, use Wirt's **Mark Last Miss / Wrong Read** or diagnostic/support-bundle feature shortly after the problem occurs.
+The Wirt's Eye Discord is the primary community support home:
 
-Then open a GitHub issue using the **Bug / Bad Read** template and attach the bundle if you are comfortable sharing it.
+https://discord.gg/xkf6KGehJH
 
-## Please include
+Use:
 
-- Wirt's Eye version.
-- Windows version.
-- Desktop resolution.
-- Windows display scaling (100%, 125%, 150%, etc.).
-- D2R resolution.
-- D2R mode: fullscreen, borderless/windowed fullscreen, or windowed.
-- What Wirt did.
-- What you expected it to do.
-- Whether the problem repeats.
+- `#help-and-support` for setup questions and general help;
+- `#bug-reports` for bugs, bad reads, crashes, run-detection problems, or UI issues;
+- `#feature-requests` for ideas and improvements;
+- `#known-issues` before filing a duplicate report.
 
-## High-value alpha reports
+GitHub Issues are still welcome if you prefer GitHub.
 
-Especially useful right now:
+## A useful bug report includes
 
-- missed Unique / Set / rune / charm alerts;
-- false high-value notifications;
-- identified multiplayer trash entering the CHECK queue too aggressively;
-- stash/rune/material setup failing on a particular display;
-- equipment setup capturing the wrong slot or missing a tooltip;
-- buttons, labels, or windows being clipped at a particular DPI setting;
-- the Inspection Queue being intrusive or behaving strangely;
-- crashes/freezes/startup failures.
+Please include as much of this as you can:
 
-## Privacy reminder
+- Wirt's Eye version;
+- Windows version;
+- desktop resolution;
+- Windows display scaling (100%, 125%, 150%, etc.);
+- D2R resolution and display mode;
+- what you were doing when the problem happened;
+- what Wirt did;
+- what you expected Wirt to do;
+- whether the problem repeats;
+- screenshots or video when useful;
+- a diagnostic/support bundle when available.
 
-Diagnostic bundles can include recent screenshots. See [PRIVACY.md](PRIVACY.md) before uploading one publicly. If a bundle contains something you do not want public, send it privately to the maintainer instead of attaching it to a public issue.
+You do not need to know what caused the problem. A clear description of what you saw is enough.
+
+## Diagnostic bundles
+
+For OCR, scanning, run tracking, loadout/state, or crash problems, create a diagnostic/support bundle from Wirt's Eye as soon as practical after reproducing the issue.
+
+Attach the bundle directly to the relevant Discord bug-report post or GitHub issue when you are comfortable sharing it.
+
+**Review the ZIP before uploading it publicly.** Current diagnostic bundles can contain recent screenshots, OCR history, logs, display/system metadata, local telemetry, settings, and selected Wirt account/loadout state used to diagnose persistence problems.
+
+See [PRIVACY.md](PRIVACY.md) for details.
+
+## Especially useful alpha reports
+
+High-value reports include:
+
+- missed or incorrect ground-item alerts;
+- incorrect item identities, rolls, or character stat totals;
+- repeated CHECK/inspection prompts for items already handled;
+- onboarding or Gear Sync failures;
+- rune, gem, or material synchronization problems;
+- runs that fail to register or false runs that register;
+- display/DPI-specific clipping or scanning failures;
+- confusing UI or unclear instructions;
+- startup crashes, freezes, or updater failures.
+
+## Security issues are different
+
+Do **not** post suspected security vulnerabilities, unsafe update behavior, credential exposure, or similar security problems publicly.
+
+See [SECURITY.md](SECURITY.md).
