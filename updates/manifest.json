@@ -3,10 +3,10 @@
   "download_page": "https://github.com/Slaterader/Wirtseye/releases",
   "channels": {
     "alpha": {
-    "version":  "5.0-alpha2-dev33",
-    "download_url":  "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha2-dev33",
-    "release_page":  "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha2-dev33",
-    "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/v5.0-alpha2-dev33/WirtsEye-5.0-alpha2-dev33-portable.zip",
+    "version":  "5.0-alpha3-preview10-hotfix7",
+    "download_url":  "https://github.com/Slaterader/Wirtseye/releases/tag/5.0-alpha3-preview10-hotfix7",
+    "release_page":  "https://github.com/Slaterader/Wirtseye/releases/tag/5.0-alpha3-preview10-hotfix7",
+    "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/5.0-alpha3-preview10-hotfix7/5.0-alpha3-preview10-hotfix7-portable.zip",
     "asset_kind":  "portable_zip",
     "sha256":  "c501d555651032d42ecf13aca6211ee8610b559139c835224739941573fbd1a6",
     "notes":  "Alpha 2 dev33: live-test reliability pass for owned-item silence, physical CHECK continuity, faster fresh-drop OCR, Warlock gear knowledge, important-material pings, character switching, and gear-based build readiness."
