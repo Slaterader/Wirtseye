@@ -97,8 +97,3 @@ Source publication/licensing for the application itself has not been finalized.
 Wirt's Eye is an independent community project and is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment.
 
 Diablo, Diablo II, Diablo II: Resurrected, and related names are trademarks of their respective owners.
-
-
-## Disclaimer
-
-Wirt's Eye is an independent community project and is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment. Diablo, Diablo II, Diablo II: Resurrected, and related names are trademarks of their respective owners.
