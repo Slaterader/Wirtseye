@@ -8,7 +8,7 @@
     "release_page":  "https://github.com/Slaterader/Wirtseye/releases/tag/5.0-alpha3-preview10-hotfix7",
     "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/v5.0-alpha3-preview10-hotfix7/5.0-alpha3-preview10-hotfix7-portable.zip",
     "asset_kind":  "portable_zip",
-    "sha256":  "1fb175ce952ebe8d32c573209de2fb0f2a7e28165405ec1520245b0835ff9f3e",
+    "sha256":  "241DF6714243166423BC0C50329548765AD7394BB414B16288E8D15138005785",
     "notes":  "Alpha 2 dev33: live-test reliability pass for owned-item silence, physical CHECK continuity, faster fresh-drop OCR, Warlock gear knowledge, important-material pings, character switching, and gear-based build readiness."
 },
     "stable": {
