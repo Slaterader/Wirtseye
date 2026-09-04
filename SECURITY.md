@@ -1,32 +1,65 @@
-# Security
+# Wirt's Eye privacy
 
-## Reporting a security issue
+Wirt's Eye is designed to operate locally on the user's Windows PC. It is a passive screen/OCR companion and does not inject into Diablo II: Resurrected, read game memory, or send gameplay input.
 
-Please do **not** post suspected security vulnerabilities, credential exposure, unsafe update behavior, tampered release concerns, or code-signing/security problems as public GitHub Issues or public Discord posts.
+## Data stored locally
 
-If GitHub private vulnerability reporting is enabled for the repository, use that. Otherwise, join the Wirt's Eye Discord and contact the project maintainer privately:
+Wirt may store local information such as:
 
-https://discord.gg/xkf6KGehJH
+- settings and notification preferences;
+- character, build, loadout, mercenary, and account progress;
+- rune, gem, material, project, and crafting state;
+- farming/run telemetry and recent session information;
+- logs and backups;
+- a bounded recent OCR/capture history used to investigate recognition mistakes.
 
-Include:
+Frozen Windows builds keep mutable user data under `%LOCALAPPDATA%\WirtsEye` by default so updating the application does not require deleting user state.
 
-- the affected Wirt's Eye version;
-- a concise description of the issue;
-- reproduction steps when safe to provide;
-- whether you believe users or release integrity are currently at risk.
+Source/development runs may use a separate data directory. `WIRTS_EYE_DATA_DIR` can override the location for testing.
 
-## Official releases
+## Screen capture and OCR
 
-Only download Wirt's Eye from the official GitHub Releases page:
+Wirt reads screen regions locally in order to understand information already visible in D2R.
 
-https://github.com/Slaterader/Wirtseye/releases
+Legacy per-scan debug image dumping is disabled by default. A bounded recent capture/OCR history may remain available so a user can deliberately mark a recent miss or create a diagnostic bundle.
 
-Release SHA-256 hashes are part of the release/update record. A matching checksum helps confirm that the downloaded ZIP is the artifact referenced by the project manifest.
+## Network activity
 
-Unsigned alpha software may still trigger Windows SmartScreen. A SmartScreen warning by itself does not prove that a file is malicious, and the absence of a warning does not prove that a file is safe.
+Wirt's Eye does not automatically upload gameplay screenshots, account state, telemetry, OCR captures, or diagnostic bundles.
 
-## Update integrity
+When update checking is enabled, Wirt makes normal HTTPS requests to the project's public update manifest and, when the user accepts an update, may download an approved release artifact from the official project hosting location.
 
-The Wirt's Eye update manifest identifies the approved version, release asset, and SHA-256 hash. Release assets and manifest metadata must remain synchronized.
+Those hosting services can receive ordinary web-request information such as IP address and user agent, as with normal web traffic.
 
-Do not replace a published release ZIP without updating its hash and re-validating the updater flow.
+## Diagnostic/support bundles
+
+A diagnostic bundle is created only after the user explicitly chooses a support/diagnostic action.
+
+Depending on the current build and the problem being investigated, a bundle may contain:
+
+- recent D2R screenshots or capture regions;
+- OCR text/history;
+- Wirt configuration;
+- session logs;
+- local telemetry relevant to recent runs/items;
+- Wirt version information;
+- display resolution, DPI/scaling, and D2R client-window geometry;
+- selected account/loadout state used to diagnose save, persistence, or refresh problems.
+
+As of `5.0-alpha3-preview10-hotfix7`, diagnostic bundles may include `data/account_state.json` so character/loadout persistence problems can be diagnosed directly.
+
+Recent screenshots can contain character names, item tooltips, chat/game UI, or anything else visible inside the captured region. Account/loadout state can reveal character names, equipment, project progress, and other local gameplay information.
+
+**Review the diagnostic ZIP before sharing it.**
+
+The bundle stays on the user's PC unless the user chooses to upload or send it through Discord, GitHub, email, or another service.
+
+## No advertising or sale of user data
+
+Wirt's Eye does not contain an advertising system or a user-data-sale system.
+
+## Official community links
+
+Discord: https://discord.gg/xkf6KGehJH
+
+GitHub: https://github.com/Slaterader/Wirtseye
