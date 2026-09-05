@@ -8,7 +8,7 @@
     "release_page":  "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha3-preview10-hotfix14",
     "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/v5.0-alpha3-preview10-hotfix14/WirtsEye-5.0-alpha3-preview10-hotfix14-portable.zip",
     "asset_kind":  "portable_zip",
-    "sha256":  "bcfac51e4b85611cbc27d3bb622a6fe34bb55b23f40e935b42260eeca944e4c6",
+    "sha256":  "c0cc23fb0a7c72dfb47c0591abe0afaa780ee2189211a83e24bbbb6676469ef1",
     "notes":  "Preview 10 Hotfix 14: fixes systemic ground-loot loss found in the H13 Cow trace by widening bounded line OCR around proposals, rescuing canonical labels from over-strict color gating, repairing small OCR damage for rare CHECK policy, capping low-yield bitmap work, and shortening unresolved-label retry backoff."
 },
     "stable": {
