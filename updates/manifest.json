@@ -3,13 +3,15 @@
   "download_page": "https://github.com/Slaterader/Wirtseye/releases",
   "channels": {
     "alpha": {
-    "version":  "5.0-alpha3-preview10-hotfix14",
-    "download_url":  "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha3-preview10-hotfix14",
-    "release_page":  "https://github.com/Slaterader/Wirtseye/releases/tag/v5.0-alpha3-preview10-hotfix14",
-    "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/v5.0-alpha3-preview10-hotfix14/WirtsEye-5.0-alpha3-preview10-hotfix14-portable.zip",
+    "version":  "5.0-alpha4",
+    "display_version":  "0.5.0",
+    "revision":  1,
+    "download_url":  "https://github.com/Slaterader/Wirtseye/releases/tag/v0.5.0",
+    "release_page":  "https://github.com/Slaterader/Wirtseye/releases/tag/v0.5.0",
+    "asset_url":  "https://github.com/Slaterader/Wirtseye/releases/download/v0.5.0/WirtsEye-0.5.0-portable.zip",
     "asset_kind":  "portable_zip",
-    "sha256":  "bcfac51e4b85611cbc27d3bb622a6fe34bb55b23f40e935b42260eeca944e4c6",
-    "notes":  "Preview 10 Hotfix 14: fixes systemic ground-loot loss found in the H13 Cow trace by widening bounded line OCR around proposals, rescuing canonical labels from over-strict color gating, repairing small OCR damage for rare CHECK policy, capping low-yield bitmap work, and shortening unresolved-label retry backoff."
+    "sha256":  "09ffaa5fe208fd04e02f334f70dd5c1a98325f92560e998dfb5dcadbbf852687",
+    "notes":  "Alpha 0.5.0: resets Wirt\u0027s Eye to the new public version scheme, carries the systemic ground-loot and Leveling Coach fixes, and introduces revision-based update ordering. The legacy version field is intentionally retained as a compatibility bridge for older Preview 10 clients."
 },
     "stable": {
       "version": "0.0.0",
